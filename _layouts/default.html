@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	{% if page.title != 'index' %}
+	    {% include index_head.html %}
+	{% else %}
+		{% include head.html %}		
+	{% endif %}
+
+	
+
+	
+<body id="#page-top">
+	{% if page.title != 'index' %}
+	    {% include navbar.html %}			
+	{% endif %}
+
+	{{ content }}
+
+</body>
+</html>

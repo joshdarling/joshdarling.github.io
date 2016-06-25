@@ -1,0 +1,26 @@
+title: "Josh"
+
+url: "http://127.0.0.1:4000/"
+
+#author
+author:
+  name: 'Josh'
+  firstname: 'Joshua'
+  lastname: 'Darling'
+  email: 'joshuadarling15@gmail.com'
+
+#blog page
+index:
+  home: 'Home'
+  about: 'About'
+  life: 'Life'
+  videos: 'Videos'
+  clothing: 'Clothing'
+  reviews: 'Reviews'
+
+
+paginate: 5
+
+
+# Gems
+gems: [jekyll-paginate]
