@@ -44,35 +44,24 @@ permalink: /
     <div class="col-md-6">
       <div class="wrapper wrapper-content">
       
-        {% for post in paginator.posts %}
         
             <div class="content">
-              <h3><a href="{{ post.url }}" class="vote-title">
-                  {{ post.title }}
-              </a></h3>
-              <p> {{ post.desc }} </p>
-              <a href="#">{{ post.date | date: "%-d %b %Y" }}</a>
+              <!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <p class="author">
+    <span class="date">{{ post.date | date: "%-d %b %Y" }}</span>
+  </p>
+  <div class="content">
+    {{ post.desc }}
+  </div>
+{% endfor %}
               
             </div>
-        {% endfor %}
+      
         
         
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+
         
         
       </div> 
